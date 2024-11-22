@@ -1,0 +1,263 @@
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text for better contrast */
+  animation: fadeIn 1s ease-in-out; /* Body animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.inventory-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #1e1e1e; /* Slightly lighter than the main background */
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+  animation: slideUp 0.8s ease-out; /* Container animation */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header Section */
+.header-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header-section h1 {
+  font-size: 36px;
+  margin: 0;
+  color: #d59c1f; /* Accent color */
+  animation: colorPulse 3s infinite; /* Pulsing color animation */
+}
+
+@keyframes colorPulse {
+  0%, 100% {
+    color: #d59c1f;
+  }
+  50% {
+    color: #e6b12e;
+  }
+}
+
+.header-section p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #a0a0a0;
+  animation: fadeIn 1.5s ease-in; /* Fade-in animation */
+}
+
+/* Search Section */
+.search-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-in; /* Smooth fade-in */
+}
+
+.search-section input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #130e0e; /* Darker input background */
+  color: #414141;
+  transition: box-shadow 0.3s ease;
+}
+
+.search-section input:focus {
+  box-shadow: 0 0 10px #d59c1f; /* Highlight on focus */
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  animation: fadeIn 1.2s ease-in; /* Smooth fade-in */
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #2e2e2e; /* Darker input background */
+  color: #e0e0e0;
+  transition: transform 0.2s ease;
+}
+
+.input-section input:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.input-section input::placeholder {
+  color: #a0a0a0;
+}
+
+.input-section button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #62bd6b;
+  color: #121212;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.input-section button:hover {
+  background: #7eb85f;
+  transform: translateY(-3px); /* Lift effect */
+}
+
+/* Table Section */
+.table-section {
+  width: 100%;
+  margin-top: 30px;
+  animation: fadeIn 1.5s ease-in; /* Smooth fade-in */
+}
+
+.table-section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+}
+
+.table-section th,
+.table-section td {
+  padding: 12px 20px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  animation: fadeInRow 1s ease-in;
+}
+
+@keyframes fadeInRow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.table-section th {
+  background-color: #333;
+  text-align: center;
+  color: #d39f30;
+  font-size: 18px;
+}
+
+.table-section td {
+  color: #e0e0e0;
+}
+
+.table-section tr:hover {
+  background-color: #3a3a3a;
+  transition: background-color 0.3s ease;
+}
+
+.table-section .action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.table-section .edit-btn,
+.table-section .delete-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.table-section .edit-btn:hover,
+.table-section .delete-btn:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
+}
+
+.no-items {
+  text-align: center;
+  font-size: 18px;
+  color: #a0a0a0;
+  opacity: 0.8;
+  animation: pulse 2s infinite; /* Pulsating effect */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* Pagination */
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  animation: slideUp 0.8s ease-out;
+}
+
+.pagination-button {
+  background-color: #f0f0f0;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #007bff;
+  color: #fff;
+  transform: translateY(-3px); /* Lift effect */
+}
+
+.pagination-button:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.pagination-button.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+  font-weight: bold;
+  transform: scale(1.1); /* Slight zoom for active button */
+}
