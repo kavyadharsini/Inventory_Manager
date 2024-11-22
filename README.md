@@ -38,7 +38,7 @@ To get started with this project, follow the steps below:
 ### Steps to use:
 
 1. **Clone the repo**: `git clone https://github.com/your-username/inventory-management.git`
-2. **Navigate to the directory**: `cd inventory-management`
+2. **Navigate to the directory**: `cd inventory-management` `cd frontend`
 3. **Install dependencies**: `npm install`
 4. **Run the project**: `npm start`
 
